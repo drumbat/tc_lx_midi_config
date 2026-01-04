@@ -1,0 +1,90 @@
+# generated: 2026-01-04
+# project: tc_lx_midi_config
+# tracking_system: file-system
+# story_location: /Users/Nick/Dropbox/Tetrachords/Code/tc_lx_midi_config/_bmad-output/implementation-artifacts
+
+# STATUS DEFINITIONS:
+# ==================
+# Epic Status:
+#   - backlog: Epic not yet started
+#   - in-progress: Epic actively being worked on
+#   - done: All stories in epic completed
+#
+# Epic Status Transitions:
+#   - backlog → in-progress: Automatically when first story is created (via create-story)
+#   - in-progress → done: Manually when all stories reach 'done' status
+#
+# Story Status:
+#   - backlog: Story only exists in epic file
+#   - ready-for-dev: Story file created in stories folder
+#   - in-progress: Developer actively working on implementation
+#   - review: Ready for code review (via Dev's code-review workflow)
+#   - done: Story completed
+#
+# Retrospective Status:
+#   - optional: Can be completed but not required
+#   - done: Retrospective has been completed
+#
+# WORKFLOW NOTES:
+# ===============
+# - Epic transitions to 'in-progress' automatically when first story is created
+# - Stories can be worked in parallel if team capacity allows
+# - SM typically creates next story after previous one is 'done' to incorporate learnings
+# - Dev moves story to 'review', then runs code-review (fresh context, different LLM recommended)
+
+generated: 2026-01-04
+project: tc_lx_midi_config
+tracking_system: file-system
+story_location: /Users/Nick/Dropbox/Tetrachords/Code/tc_lx_midi_config/_bmad-output/implementation-artifacts
+
+development_status:
+  epic-1: in-progress
+  1-1-initialize-vite-react-ts-project-with-tailwind-v4: review
+  1-2-define-typescript-data-structures: backlog
+  1-3-setup-vitest-testing-infrastructure: backlog
+  1-4-setup-playwright-e2e-testing: backlog
+  1-5-configure-github-pages-deployment-with-ci-cd: backlog
+  1-6-setup-ci-pipeline-for-tests-and-linting: backlog
+  1-7-configure-accessibility-testing-setup: backlog
+  epic-1-retrospective: optional
+
+  epic-2: backlog
+  2-1-implement-midiservice-web-midi-api-wrapper: backlog
+  2-2-implement-sysex-parser-for-lx-palette-ux-api: backlog
+  2-3-implement-lxpaletteapi-service-layer: backlog
+  2-4-create-usemidiconnection-react-hook: backlog
+  2-5-build-browser-compatibility-detection: backlog
+  2-6-implement-smart-connection-flow-with-auto-detect: backlog
+  2-7-handle-midi-permission-and-connection-errors: backlog
+  epic-2-retrospective: optional
+
+  epic-3: backlog
+  3-1-create-usepalette-react-hook: backlog
+  3-2-implement-lxp-file-parsing-and-generation: backlog
+  3-3-build-palette-slot-manager-component: backlog
+  3-4-implement-browser-file-download-for-palettes: backlog
+  3-5-implement-browser-file-upload-for-palettes: backlog
+  3-6-implement-localstorage-fallback-for-unsaved-changes: backlog
+  3-7-handle-palette-save-and-load-errors: backlog
+  epic-3-retrospective: optional
+
+  epic-4: backlog
+  4-1-build-interactive-faceplate-svg-component: backlog
+  4-2-implement-spectrum-inspired-color-wheel-component: backlog
+  4-3-build-brightness-slider-with-dynamic-gradient: backlog
+  4-4-create-rgb-value-input-group-component: backlog
+  4-5-build-virtual-track-buttons-component: backlog
+  4-6-implement-real-time-led-update-via-palette-set-rgb: backlog
+  4-7-build-copy-paste-color-functionality: backlog
+  4-8-implement-responsive-desktop-layout-all-5-pickers-visible: backlog
+  4-9-implement-responsive-mobile-layout-contextual-pickers: backlog
+  4-10-apply-visual-design-system-colors-typography-spacing: backlog
+  4-11-implement-comprehensive-keyboard-navigation: backlog
+  4-12-add-aria-attributes-and-screen-reader-support: backlog
+  epic-4-retrospective: optional
+
+  epic-5: backlog
+  5-1-build-centralized-error-display-component: backlog
+  5-2-map-all-lx-palette-ux-api-error-codes-to-user-messages: backlog
+  5-3-implement-comprehensive-e2e-error-recovery-tests: backlog
+  epic-5-retrospective: optional
