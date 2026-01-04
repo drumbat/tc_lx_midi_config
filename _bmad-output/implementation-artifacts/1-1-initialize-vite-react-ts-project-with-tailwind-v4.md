@@ -41,20 +41,20 @@ So that I can begin building the palette editor with a modern, fast development 
 ### Review Follow-ups (AI Code Review - 2026-01-04)
 
 **Critical Issues:**
-- [ ] [AI-Review][HIGH] Fix false claim: Remove src/vite-env.d.ts from File List (line 228) - file doesn't exist [1-1-initialize-vite-react-ts-project-with-tailwind-v4.md:228]
-- [ ] [AI-Review][HIGH] Create initial git commit with all project files [.]
-- [ ] [AI-Review][HIGH] Clean up assets directory: Remove empty src/assets/ OR document why kept [src/assets/]
+- [x] [AI-Review][HIGH] Fix false claim: Remove src/vite-env.d.ts from File List (line 228) - file doesn't exist [1-1-initialize-vite-react-ts-project-with-tailwind-v4.md:228]
+- [x] [AI-Review][HIGH] Create initial git commit with all project files [.]
+- [x] [AI-Review][HIGH] Clean up assets directory: Remove empty src/assets/ OR document why kept [src/assets/]
 
 **Medium Priority:**
-- [ ] [AI-Review][MEDIUM] Update HTML title to human-readable format [index.html:7]
-- [ ] [AI-Review][MEDIUM] Fix deprecated ESLint config: Remove globalIgnores import [eslint.config.js:6]
-- [ ] [AI-Review][MEDIUM] Create README.md with setup instructions [.]
-- [ ] [AI-Review][MEDIUM] Clarify Deleted section in File List [1-1-initialize-vite-react-ts-project-with-tailwind-v4.md:234-237]
+- [x] [AI-Review][MEDIUM] Update HTML title to human-readable format [index.html:7]
+- [x] [AI-Review][MEDIUM] Fix deprecated ESLint config: Remove globalIgnores import [eslint.config.js:6]
+- [x] [AI-Review][MEDIUM] Create README.md with setup instructions [.]
+- [x] [AI-Review][MEDIUM] Clarify Deleted section in File List [1-1-initialize-vite-react-ts-project-with-tailwind-v4.md:234-237]
 
 **Low Priority:**
-- [ ] [AI-Review][LOW] Add .gitattributes for line ending consistency [.]
-- [ ] [AI-Review][LOW] Consider replacing generic Vite favicon (or note intentionally kept) [public/vite.svg]
-- [ ] [AI-Review][LOW] Update story AC to say "React 19+" instead of "18+" [1-1-initialize-vite-react-ts-project-with-tailwind-v4.md:18]
+- [x] [AI-Review][LOW] Add .gitattributes for line ending consistency [.]
+- [x] [AI-Review][LOW] Consider replacing generic Vite favicon (or note intentionally kept) [public/vite.svg]
+- [x] [AI-Review][LOW] Update story AC to say "React 19+" instead of "18+" [1-1-initialize-vite-react-ts-project-with-tailwind-v4.md:18]
 
 ## Dev Notes
 
@@ -64,6 +64,7 @@ So that I can begin building the palette editor with a modern, fast development 
 - **Rationale:** Official Vite template ensures long-term maintenance and Vite 7.x compatibility
 - **Key Benefit:** Clean TypeScript setup optimized for LLM-assisted development
 - **Tailwind v4:** Uses `@tailwindcss/vite` plugin with CSS-based config (no tailwind.config.js needed)
+- **Favicon:** Vite logo (public/vite.svg) intentionally kept from template - custom favicon will be added in future branding story
 
 **Initialization Commands:**
 ```bash
@@ -95,7 +96,7 @@ export default defineConfig({
 
 | Technology | Version | Critical Notes |
 |------------|---------|----------------|
-| React | 18+ | Function components only (no class components) |
+| React | 19+ | Function components only (no class components) |
 | TypeScript | 5.x | **Strict mode required** - no `any` types allowed |
 | Vite | 7.x | ESM-only, native ESM for instant server start |
 | Tailwind CSS | v4 | CSS-based config via `@tailwindcss/vite` plugin |
@@ -250,4 +251,4 @@ Claude Sonnet 4.5 (claude-sonnet-4-5-20250929)
 
 **Deleted:**
 - src/App.css - Removed unused template CSS
-- src/assets/react.svg - Removed unused asset
+- src/assets/react.svg - Removed unused React logo asset

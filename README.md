@@ -1,73 +1,85 @@
-# React + TypeScript + Vite
+# TC LX MIDI Palette Editor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web-based MIDI palette editor for the Tetrachords LX, enabling real-time color palette editing via Web MIDI API with support for RGB color controls, SysEx communication, and palette management.
 
-Currently, two official plugins are available:
+## Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The TC LX MIDI Palette Editor is a browser-based application that allows users to configure and manage color palettes for the Tetrachords LX hardware. The editor communicates with the device using the Web MIDI API over SysEx messages, providing an intuitive interface for real-time color editing and palette configuration.
 
-## React Compiler
+## Setup
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
 
-## Expanding the ESLint configuration
+- Node.js (Latest LTS version recommended)
+- Modern browser with Web MIDI API support (Chrome, Edge, or Opera)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Installation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd tc_lx_midi_config
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Install dependencies:
+```bash
+npm install
 ```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+4. Open your browser and navigate to the local development URL (typically `http://localhost:5173`)
+
+## Available Commands
+
+- `npm run dev` - Start Vite development server with hot module replacement
+- `npm run build` - Build production-ready application (TypeScript compilation + Vite build)
+- `npm run lint` - Run ESLint to check code quality
+- `npm run preview` - Preview production build locally
+
+## Tech Stack
+
+### Core Technologies
+- **React 19.2** - UI framework (function components only)
+- **TypeScript 5.9** - Type-safe JavaScript (strict mode enabled)
+- **Vite 7.2** - Fast build tool and dev server
+
+### Styling
+- **Tailwind CSS v4.1** - Utility-first CSS framework
+- **@tailwindcss/vite** - Vite plugin for Tailwind v4 (CSS-based configuration)
+
+### Development Tools
+- **ESLint 9.39** - Code linting with React-specific rules
+- **typescript-eslint 8.46** - TypeScript ESLint integration
+
+## Project Structure
+
+```
+src/
+  components/     # UI components (PascalCase.tsx)
+  hooks/          # Custom hooks (useCamelCase.ts)
+  services/midi/  # MIDI layer (MidiService, LXPaletteAPI, SysExParser)
+  types/          # TypeScript interfaces (palette.ts, midi.ts, errors.ts)
+  utils/          # Helpers (colorMath.ts, sysexEncoding.ts)
+  context/        # React contexts (MidiContext, PaletteContext)
+```
+
+## Development Guidelines
+
+- **TypeScript Strict Mode**: All code must pass strict type checking (no `any` types)
+- **React Patterns**: Function components only, immutable state updates
+- **Tailwind v4**: CSS-based configuration via `@import "tailwindcss"` (no tailwind.config.js)
+- **RGB Channel Order**: Hardware uses R, B, G order (not standard RGB)
+- **MIDI Constraints**: All MIDI bytes must be 7-bit (0x00-0x7F)
+
+## Browser Requirements
+
+- Modern browser with Web MIDI API support
+- HTTPS connection required for Web MIDI API access (development on localhost is exempt)
+
+## License
+
+[Add license information here]
