@@ -1,6 +1,6 @@
 # Story 1.1: Initialize Vite React-TS Project with Tailwind v4
 
-Status: review
+Status: done
 
 ## Story
 
