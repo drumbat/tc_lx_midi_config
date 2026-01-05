@@ -6,7 +6,15 @@ import tseslint from 'typescript-eslint'
 import { defineConfig } from 'eslint/config'
 
 export default defineConfig([
-  { ignores: ['dist'] },
+  {
+    ignores: [
+      'dist',
+      'coverage',
+      '_bmad',
+      'tests/e2e',
+      'playwright.config.ts'
+    ]
+  },
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
