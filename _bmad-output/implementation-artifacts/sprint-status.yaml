@@ -39,12 +39,12 @@ story_location: /Users/Nick/Dropbox/Tetrachords/Code/tc_lx_midi_config/_bmad-out
 
 development_status:
   epic-1: in-progress
-  1-1-initialize-vite-react-ts-project-with-tailwind-v4: review
+  1-1-initialize-vite-react-ts-project-with-tailwind-v4: done
   1-2-define-typescript-data-structures: done
-  1-3-setup-vitest-testing-infrastructure: review
-  1-4-setup-playwright-e2e-testing: backlog
-  1-5-configure-github-pages-deployment-with-ci-cd: backlog
-  1-6-setup-ci-pipeline-for-tests-and-linting: backlog
+  1-3-setup-vitest-testing-infrastructure: done
+  1-4-setup-playwright-e2e-testing: done
+  1-5-configure-github-pages-deployment-with-ci-cd: done
+  1-6-setup-ci-pipeline-for-tests-and-linting: done
   1-7-configure-accessibility-testing-setup: backlog
   epic-1-retrospective: optional
 
